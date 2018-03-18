@@ -1,12 +1,14 @@
-// const isPalindromes = (str) => {
+const isPalindromes = (str) => {
 
 
-//   var n = str.length - 1
+  var str2 = str.split("");
+  str2 = str2.reverse()
+  str2 = str2.join("")
+  if (str == str2) {
+    return true
+  } else return false
 
-//   if(str.substring(0,))
-// }
 
-// console.log(isPalindromes("1213123"))
+}
 
-console.log("1253143".substring(2, 5))
-console.log("1253143".length)
+module.exports = isPalindromes
