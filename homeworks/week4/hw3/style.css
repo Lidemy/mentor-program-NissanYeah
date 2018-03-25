@@ -1,0 +1,60 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("./background.jpg");
+}
+
+.channel {
+    display: inline-block;
+    margin: 50px;
+    margin-left: 60px;
+    position: relative;
+    width: 300px;
+    height: 250px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.channel:hover {
+    box-shadow: 3px 3px 10px black;
+    filter: brightness(1.4);
+}
+
+.channel_pic {
+    width: 100%;
+}
+
+.channel_bottom {
+    position: relative;
+    width: 100%;
+    /* background-color: black; */
+}
+
+.channel_logo {
+    margin-left: 8px;
+    border-radius: 50%;
+    width: 68px
+}
+
+.channel_name {
+    position: absolute;
+    left: 85px;
+    top: -6px;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.channel_hoster {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    left: 85px;
+    top: 30px;
+    font-size: 10px;
+}

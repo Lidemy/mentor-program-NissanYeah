@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="og:title" content="計算機">
+    <meta name="og:description" content="非常簡單的計算機">
+    <meta name="og:type" content="website">
+    <link rel="stylesheet" href="./style.css">
+    <title>computer</title>
+</head>
+
+<body>
+    <div class="statement">
+
+        <br>
+        <h1>簡單的計算機</h1>
+
+    </div>
+    <div id="computer">
+        <div id="computer_screen">
+            <p></p>
+        </div>
+        <div class="compureer_button">
+            <button class="gray" onclick="chose(17)">(</button>
+            <button class="gray" onclick="chose(18)">)</button>
+            <button class="gray" onclick="chose(3)">%</button>
+            <button class="gray" onclick="chose(10)">AC</button>
+            <button onclick="chose(7)">7</button>
+            <button onclick="chose(8)">8</button>
+            <button onclick="chose(9)">9</button>
+            <button class="gray" onclick="chose(15)">÷</button>
+            <button onclick="chose(4) ">4</button>
+            <button onclick="chose(5) ">5</button>
+            <button onclick="chose(6) ">6</button>
+            <button class="gray" onclick="chose(14) ">X</button>
+            <button onclick="chose(1) ">1</button>
+            <button onclick="chose(2) ">2</button>
+            <button onclick="chose(3) ">3</button>
+            <button class="gray" onclick="chose(13) ">-</button>
+            <button onclick="chose(0) ">0</button>
+            <button onclick="chose(16)">.</button>
+            <button class="blue" onclick="chose(11) ">=</button>
+            <button class="gray" onclick="chose(12) ">+</button>
+        </div>
+    </div>
+
+    <script>
+        var screen = document.querySelector('#computer_screen p');
+
+
+        function chose(x) {
+
+
+            // 數字
+            if (x <= 9) {
+                screen.innerHTML += x
+            }
+            // 清空
+            if (x == 10) {
+                screen.innerHTML = ''
+            }
+            if (x == 11) {
+                // 等於
+                screen.innerHTML = eval(screen.innerHTML);
+                spy = 1;
+            }
+            if (x == 12) {
+                // 加+符號 
+                screen.innerHTML += '+'
+            }
+            if (x == 13) {
+                // 加-符號 
+                screen.innerHTML += '-'
+            }
+            if (x == 14) {
+                // 加*符號 
+                screen.innerHTML += '*'
+            }
+            // 加%符號
+            if (x == 15) {
+                screen.innerHTML += '/'
+            }
+            // 加.符號
+            if (x == 16) {
+                screen.innerHTML += '.'
+            }
+            // 加(符號
+            if (x == 17) {
+                screen.innerHTML += '('
+            }
+            // 加)符號
+            if (x == 18) {
+                screen.innerHTML += ')'
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

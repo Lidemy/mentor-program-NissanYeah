@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>簡化</title>
+</head>
+
+<body>
+    <span class="y">妳好</span>
+</body>
+
+<script>
+    function q(x) {
+        element = document.querySelector(x);
+        element.hide = function () {
+            this.style.display = "none";
+        }
+        element.show = function () {
+            this.style.display = "block";
+        }
+        return element
+    }
+</script>
+
+</html>

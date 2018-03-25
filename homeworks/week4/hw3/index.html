@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="og:title" content="API串接練習">
+    <meta name="og:description" content="不知道為什麼就成功了...手機開應該會爆炸">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="./background.jpg">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>API串接練習</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var clientID = 'ib5wejgagbp1dsdx25zr1sbbpbq3tn';
+            var limit = 20;
+            var apiURL = 'https://api.twitch.tv/kraken/streams?game=League%20of%20Legends' + '&limit=' + limit
+
+            //   發送請求
+            var request = new XMLHttpRequest;
+            request.open('GET', apiURL, true);
+            request.setRequestHeader('client-id', clientID);
+            request.send();
+
+
+            request.onload = function () {
+                if (request.status >= 200 && request.status < 400) {
+
+                    var post = JSON.parse(request.response)
+                    console.log(post)
+
+
+
+                    for (let i = 0; i <= 20; i++) {
+                        var channellink = post.streams[i].channel.url
+                        var channelphoto = post.streams[i].preview.medium
+                        var logourl = post.streams[i].channel.logo
+                        var channelname = post.streams[i].channel.status
+                        var hostername = post.streams[i].channel.name
+                        document.querySelectorAll('.link')[i].href = channellink;
+                        document.querySelectorAll('.channel_pic img')[i].src = channelphoto;
+                        document.querySelectorAll('.channel_logo')[i].src = logourl;
+                        document.querySelectorAll('.channel_name')[i].innerText =
+                            channelname;
+                        document.querySelectorAll('.channel_hoster')[i].innerText =
+                            hostername
+                    }
+
+                } else {}
+            }
+
+
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+        <a href="" class="link">
+            <div class="channel">
+                <div class="channel_pic">
+                    <img src="./twitch320X180.jpg" width="100%" ; alt="">
+                </div>
+                <div class="channel_bottom">
+                    <img class="channel_logo" src="./hoster.png" alt="">
+                    <p class="channel_name">頻道名稱</p>
+                    <p class="channel_hoster"> 實況主名稱</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>
