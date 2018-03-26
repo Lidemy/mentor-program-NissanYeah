@@ -1,4 +1,4 @@
-function arrstar(x) {
+export function arrstar(x) {
 
     function starCreat(x) {
         var star = ""
@@ -32,4 +32,4 @@ function arrstar(x) {
 // } 帶除錯
 
 
-module.exports = arrstar
+// module.exports = arrstar

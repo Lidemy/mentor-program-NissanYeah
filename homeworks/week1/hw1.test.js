@@ -1,9 +1,6 @@
-// import {
-//   arrstar,
-//   starCreat
-// } from './hw1'
+import arrstar from "./hw1.js"
 
-var arrstar = require("./hw1");
+// var arrstar = require("./hw1");
 
 
 describe("hw1", () => {

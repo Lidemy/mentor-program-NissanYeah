@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.statement {
+    text-align: center;
+}
+
+#computer {
+    position: relative;
+    margin: 100px auto;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.3);
+    width: 700px;
+    height: 360px;
+}
+
+#computer_screen {
+    position: absolute;
+    margin: 40px 85px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    width: 76%;
+    height: 13%;
+}
+
+#computer_screen p {
+    position: absolute;
+    top: -1px;
+    right: 10px;
+    font-size: 30px;
+}
+
+.compureer_button {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    margin: 100px 70px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.compureer_button button {
+    width: 120px;
+    height: 30px;
+    font-size: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #f4f3f4;
+}
+
+.compureer_button .gray {
+    background-color: #d3d3d3
+}
+
+.compureer_button .blue {
+    background-color: #4a8bf8;
+    color: white;
+}
+
+#compureer_button button:hover {
+    cursor: pointer;
+}
